@@ -33,37 +33,63 @@ const RecentOrdersSection = () => {
 
   ]
   return (
-    <table className='mt-8'>
-      <thead className=' bg-slate-200'>
-        <tr className='px-4'>
-          <th>#</th>
-          <th>image</th>
-          <th>Product Name</th>
-          <th>Product Id</th>
-          <th>Quantity</th>
-          <th>Price</th>
-          <th>Order Time</th>
-          <th>Customer</th>
-          <th>Status</th>
+    <div className='mt-8 flex gap-4'>
+    <div className='max-w-[650px] bg-white shadow-md'>
+      <h2 className='py-4 px-4 font-semibold'>Recent Orders</h2>
+    <table className="w-full">
+  <thead className="bg-slate-200">
+    <tr className="space-x-4">
+      <th className="py-2 px-2">#</th>
+      <th className="py-2 px-2">Image</th>
+      <th className="py-2 px-2">Product Name</th>
+      <th className="py-2 px-2">Product ID</th>
+      <th className="py-2">Quantity</th>
+      <th className="py-2">Price</th>
+      <th className="py-2">Order Time</th>
+      <th className="py-2">Customer</th>
+      <th className="py-2">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {data.map((item) => (
+      <tr key={item.id}>
+        <td className="py-2">{item.id}</td>
+        <td className="py-2">{item.image}</td>
+        <td className="py-2">{item.productName}</td>
+        <td className="py-2">{item.productId}</td>
+        <td className="py-2">{item.quantity}</td>
+        <td className="py-2">{item.price}</td>
+        <td className="py-2">{item.orderTime}</td>
+        <td className="py-2">{item.customer}</td>
+        <td className="py-2">{item.status}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+{/** right container of recent Orders {performing campaigns} */}
+
+</div>
+<div className='bg-white shadow-md'>
+  <h2 className='font-semibold'>Top Performing Campaigns </h2>
+  <div>
+    <table>
+      <thead>
+        <tr className=''>
+          <th className='p-2'>Campaign</th>
+          <th className='p-2'>Visits</th>
+          <th className='p-2'>Revenue</th>
         </tr>
       </thead>
+
       <tbody>
-        {
-          data.map((item) => (
-            <tr key={item.id}>
-              <td>{item.id}</td>
-              <td>{item.image}</td>
-              <td>{item.productName}</td>
-              <td>{item.productId}</td>
-              <td>{item.quantity}</td>
-              <td>{item.orderTime}</td>
-              <td>{item.customer}</td>
-              <td>{item.status}</td>
-            </tr>
-          ))
-        }
+
       </tbody>
     </table>
+  </div>
+</div>
+</div>
+
   )
 }
 
