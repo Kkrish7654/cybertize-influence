@@ -79,7 +79,7 @@ const Accordion = ({ header, items, icon, activeColor, activeBackground }) => {
 
 // side bar component
 // calling all dropdown in this accordion
-const SideBar = () => {
+const Sidebar = () => {
   return (
     <div className=" left-0 pt-20 px-4 fixed h-screen w-[270px] bg-[#2E2F39] flex flex-col items-start overflow-y-scroll no-scrollbar">
       <div>
@@ -233,4 +233,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default Sidebar;
