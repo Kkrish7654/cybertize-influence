@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Footer = () => {
   return (
-    <footer className='fixed bottom-0'>
+    <footer className=' bottom-0 ml-[calc()] mt-4 p-4'>
       <div>
 
       </div>

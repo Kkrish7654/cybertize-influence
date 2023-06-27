@@ -81,7 +81,7 @@ const Accordion = ({ header, items, icon, activeColor, activeBackground }) => {
 // calling all dropdown in this accordion
 const SideBar = () => {
   return (
-    <div className=" left-0 pt-20 px-4 h-screen w-[280px] bg-[#2E2F39] flex flex-col items-start overflow-y-scroll no-scrollbar">
+    <div className=" left-0 pt-20 px-4 fixed h-screen w-[280px] bg-[#2E2F39] flex flex-col items-start overflow-y-scroll no-scrollbar">
       <div>
         <h2 className="text-[#82849F] font-bold text-sm my-5">MENU</h2>
       </div>

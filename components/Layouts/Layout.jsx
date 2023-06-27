@@ -11,11 +11,11 @@ const Layout = (data) => {
         <title>{data.pageTitle}</title>
         <Navbar/>
 
-        <div className='flex flex-row bg-slate-100'>
+        <div className='flex flex-row bg-slate-100 w-full overflow-hidden'>
             <div>
                 <SideBar/>
             </div>
-            <div>
+            <div className='ml-[280px] w-full'>
                 {data.children}
             </div>
         </div>
