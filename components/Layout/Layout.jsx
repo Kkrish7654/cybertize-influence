@@ -3,7 +3,6 @@ import Footer from "../Footer/Footer";
 import Sidebar from "../Sidebar/Sidebar";
 
 const Layout = (data) => {
-    const webTitle = "home";
    // const pageTitle = "E-commerce Dashboard Template"
     return (
         <>
