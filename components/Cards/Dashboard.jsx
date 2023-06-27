@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./topCard";
-import RecentOrdersSection from "./RecentOrderCard";
-import TopCampaigns from "./CampaignCard";
+import RecentOrdersSection from "./RecentOrdersSection";
+import TopCampaigns from "./TopCampaigns";
 // all cards
 
 // calling upper components inside main dashboard
