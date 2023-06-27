@@ -1,7 +1,6 @@
-gi
-import Navbar from "../header/Navbar";
-import Footer from "../footer/Footer";
-import SideBar from "../sidebar/SideBar";
+import Navbar from "../Header/Header";
+import Footer from "../Footer/Footer";
+import SideBar from "../Sidebar/Sidebar";
 
 const Layout = (data) => {
     const webTitle = "home";
