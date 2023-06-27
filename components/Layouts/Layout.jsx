@@ -15,7 +15,7 @@ const Layout = (data) => {
             <div>
                 <SideBar/>
             </div>
-            <div className='ml-[280px] w-full'>
+            <div className='ml-[270px] w-[calc(100%-_270px)]'>
                 {data.children}
             </div>
         </div>

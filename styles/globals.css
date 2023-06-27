@@ -18,8 +18,12 @@
         scrollbar-width: none;  /* Firefox */
     }
   }
+
 }
 
+::-webkit-scrollbar{
+  width: 5px;
+}
 html{
   font-family: 'Montserrat', sans-serif;
 }
