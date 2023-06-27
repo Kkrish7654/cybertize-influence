@@ -65,7 +65,7 @@ const RecentOrdersSection = () => {
   ];
   
   return (
-      <div className=" w-[70%] bg-white shadow-md px-2 overflow-x-scroll">
+      <div className=" w-[70%] bg-white shadow-md px-2 overflow-x-scroll scrollbar">
         <h2 className="py-4 px-4 font-medium">Recent Orders</h2>
         <table className="w-full table-auto">
           <thead className="bg-slate-200 flex text-white">

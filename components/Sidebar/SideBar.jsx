@@ -3,11 +3,12 @@ import Link from "next/link";
 
 // calling json for sidebar links---
 const Dashboard = [
-  { title: "E-commerce", path: "#" },
-  { title: "Finance", path: "#" },
-  { title: "Sales", path: "#" },
-  { title: "Influencer", path: "#" },
-  // add new links here
+  { title: "E Commerce Dashboard", path: "/" },
+  { title: "Product List", path: "/products" },
+  { title: "Product Single", path: "/productsingle" },
+  { title: "Product Checkout", path: "/productcheckout" },
+  
+  //add new links here
 ];
 
 // sidebar drop down accordion

@@ -7,7 +7,7 @@ import TopCampaigns from "./TopCampaigns";
 // calling upper components inside main dashboard
 const Dashboard = () => {
   return (
-    <div className="mt-24 px-8">
+    <div className="">
       <div>
         <h1 className="text-3xl text-[#454650] font-semibold tracking-wider pb-3">
           E-commerce Dashboard

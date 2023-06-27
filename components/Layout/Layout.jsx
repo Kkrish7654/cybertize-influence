@@ -9,15 +9,15 @@ const Layout = (data) => {
         <title>{data.pageTitle}</title>
         <Navbar/>
 
-        <div className='flex flex-row bg-slate-100 w-full overflow-hidden'>
+        <div className='flex flex-row bg-slate-100 w-full'>
             <div>
                 <SideBar/>
             </div>
-            <div className='ml-[270px] w-[calc(100%-_270px)]'>
+            <div className='ml-[290px] mt-24 mb-24 w-[calc(100%_-_310px)] h-screen'>
                 {data.children}
             </div>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }
