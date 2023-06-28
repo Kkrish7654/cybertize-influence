@@ -1,6 +1,6 @@
 import Navbar from "../Header/Header";
 import Footer from "../Footer/Footer";
-import SideBar from "../sidebar/SideBar";
+import SideBar from "../Sidebar/SideBar";
 
 const Layout = (data) => {
    // const pageTitle = "E-commerce Dashboard Template"
