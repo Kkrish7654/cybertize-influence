@@ -1,12 +1,7 @@
-import React, { useState } from "react";
-import Layout from "../../components/Layout/Layout";
-import FilterBar from "../../components/ProductsComponents/FilterBar";
-import Pagination from "../../components/ProductsComponents/Pagination";
-import RelatedProducts from "../../components/ProductsComponents/RelatedProducts";
+import React from 'react'
+import { useState } from 'react';
 
-
-
-const ProductPage = () => {
+const RelatedProducts = () => {
 
   const [like, setLike] = useState({});
 
@@ -37,29 +32,13 @@ const ProductPage = () => {
       title: "T-Shirt Product Title",
       price: 49.00,
       star: 4,
-    },
-    {
-      id: 4,
-      image: "https://preview.easetemplate.com/influence/html/influence/assets/images/eco-product-img-1.png",
-      title: "T-Shirt Product Title",
-      price: 49.00,
-      star: 4,
-    },
-  ];
+    }
+  ]
 
   return (
-    <Layout>
-      <div>
-        <h1 className="text-3xl text-[#454650] font-semibold tracking-wider pb-3">
-          E-commerce Dashboard
-        </h1>
-        <hr />
-        <p className="pt-3 text-[#787982] tracking-wider">
-          <span>Dashboard</span> E-Commerce Dashboard Template
-        </p>
-      </div>
-
-    <div className="grid grid-cols-6 gap-4 mt-12">
+    <div className="w-full flex flex-grow justify-center items-center mt-8">
+      <div className="w-[70%] h-auto divide-x-2 gap-4 ">
+        <h2 className='my-2 font-semibold text-xl text-[#58585b] mb-4'>Related Products</h2>
       <div className="grid grid-cols-3 gap-4 col-start-1 col-end-5">
       {products.map((product, index) => {
         return (
@@ -88,14 +67,9 @@ const ProductPage = () => {
         );
       })}
       </div>
-      <div className="col-start-5 col-end-7 h-auto">
-        <FilterBar/>
-      </div>
     </div>
-    <Pagination/>
-    </Layout>
-  );
-};
+    </div>
+  )
+}
 
-export default  ProductPage;
-  ;
+export default RelatedProducts
