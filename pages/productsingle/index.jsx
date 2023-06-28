@@ -1,7 +1,20 @@
 import React from 'react'
+import { useState } from 'react';
 import Layout from '../../components/Layout/Layout'
+import ProductSizeSelector from '../../components/ProductsComponents/ProductSizeSelector'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Pagination, Autoplay } from "swiper";
 
 const index = () => {
+
+  const [selected, setSelected] = useState(null);
+
+  const handleSelected = (index) => {
+    setSelected(index);
+  }
+
   return (
     <Layout>
       <div>
@@ -14,9 +27,32 @@ const index = () => {
         </p>
       </div>
      <div className='w-full flex flex-grow justify-center items-center mt-8'>
-        <div className='min-w-[65%] h-auto bg-white flex divide-x-2 shadow-md gap-4'>
-            <div className='p-4 flex justify-center items-center w-full'>
-              <img src="https://preview.easetemplate.com/influence/html/influence/assets/images/eco-slider-img-2.png" alt="" />
+        <div className='w-[70%] h-auto bg-white flex divide-x-2 shadow-md gap-4'>
+            <div className='p-4 flex justify-center items-center w-[50%]'>
+            <Swiper
+             spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper"
+            >
+                <SwiperSlide>
+                  <img src="https://preview.easetemplate.com/influence/html/influence/assets/images/eco-slider-img-2.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://preview.easetemplate.com/influence/html/influence/assets/images/eco-slider-img-2.png" alt="" />              
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://preview.easetemplate.com/influence/html/influence/assets/images/eco-slider-img-2.png" alt="" />
+                </SwiperSlide>
+              </Swiper>
             </div>
             <div className='p-4 flex flex-col gap-4 w-full'>
               <h1 className='text-2xl font-semibold text-[#454650]'>T-Shirt Product Title</h1>
@@ -31,7 +67,25 @@ const index = () => {
               <hr />
               <div>
                 <h3 className='font-semibold text-[#454650]'>Select Colors</h3>
+                <div className='flex gap-2 items-center p-2'>
+                <button onClick={() => handleSelected('1')} className={`w-10 h-10 rounded-full  ${selected === '1' ? 'bg-black' : 'bg-rose-600'}`}></button>             
+                <button onClick={() => handleSelected('2')} className={`w-10 h-10 rounded-full  ${selected === '2' ? 'bg-black' : 'bg-red-400'}`}></button>             
+                  <button onClick={() => handleSelected('3')} className={`w-10 h-10 rounded-full  ${selected === '3' ? 'bg-black' : 'bg-yellow-600'}`}></button>             
+                </div>
               </div>
+              <div>
+                <h3>Size</h3>
+                <ProductSizeSelector/>
+              </div>
+              <div>
+                <h3 className='font-semibold text-[#454650]'>Description</h3>
+                <p className='text-[#6d6d70]'>
+                Praesent et cursus quam. Etiam vulputate est et metus pellentesque iaculis. Suspendisse nec urna augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                </p>
+              </div>
+              <button className='py-3 px-6 bg-blue-600 text-white rounded-md active:scale-90 duration-150'>
+                Add To Cart
+              </button>
         </div>
      </div>
      </div>
@@ -39,4 +93,47 @@ const index = () => {
   )
 }
 
-export default index
+export default index;
+
+
+
+
+// import React, { useState } from 'react';
+
+// const ProductButtons = () => {
+//   const [selectedButton, setSelectedButton] = useState(null);
+
+//   const handleButtonClick = (buttonId) => {
+//     setSelectedButton(buttonId);
+//   };
+
+//   return (
+//     <div>
+//       <button
+//         className={`productimg ${selectedButton === '1' ? 'selected' : ''}`}
+//         onClick={() => handleButtonClick('1')}
+//       >
+//         <img src="images/plainnoodles.jpg" alt="" />
+//         <div className="productName">Noodles</div>
+//       </button>
+
+//       <button
+//         className={`productimg ${selectedButton === '2' ? 'selected' : ''}`}
+//         onClick={() => handleButtonClick('2')}
+//       >
+//         <img src="images/plainrice.jpg" alt="" />
+//         <div className="productName">Rice</div>
+//       </button>
+
+//       <button
+//         className={`productimg ${selectedButton === '3' ? 'selected' : ''}`}
+//         onClick={() => handleButtonClick('3')}
+//       >
+//         <img src="images/pizza.jpg" alt="" />
+//         <div className="productName">Pizza</div>
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default ProductButtons;

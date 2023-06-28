@@ -3,6 +3,8 @@ import Layout from "../../components/Layout/Layout";
 import FilterBar from "../../components/ProductsComponents/FilterBar";
 import Pagination from "../../components/ProductsComponents/Pagination";
 
+
+
 const ProductPage = () => {
 
   const [like, setLike] = useState({});
