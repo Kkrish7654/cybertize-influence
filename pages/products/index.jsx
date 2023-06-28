@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Layout from "../../components/Layout/Layout";
 import FilterBar from "../../components/ProductsComponents/FilterBar";
 
@@ -12,12 +11,33 @@ const ProductPage = () => {
       price: 49.00,
       star: 4,
     },
+    {
+      id: 2,
+      image: "https://preview.easetemplate.com/influence/html/influence/assets/images/eco-product-img-1.png",
+      title: "T-Shirt Product Title",
+      price: 49.00,
+      star: 4,
+    },
+    {
+      id: 3,
+      image: "https://preview.easetemplate.com/influence/html/influence/assets/images/eco-product-img-1.png",
+      title: "T-Shirt Product Title",
+      price: 49.00,
+      star: 4,
+    },
+    {
+      id: 4,
+      image: "https://preview.easetemplate.com/influence/html/influence/assets/images/eco-product-img-1.png",
+      title: "T-Shirt Product Title",
+      price: 49.00,
+      star: 4,
+    },
   ];
 
   return (
     <Layout>
-    <div className="flex mr-4">
-      <div className="flex flex-wrap ">
+    <div className="flex mr-4 min-w-[70%] h-auto">
+      <div className="flex flex-wrap  gap-4">
       {products.map((product) => {
         return (
           <div key={product.id} className="max-w-[220px] min-h-[300px] h-auto bg-white rounded-md shadow-md p-8">
@@ -42,7 +62,7 @@ const ProductPage = () => {
         );
       })}
       </div>
-      <div>
+      <div className="w-[30%]">
         <FilterBar/>
       </div>
     </div>

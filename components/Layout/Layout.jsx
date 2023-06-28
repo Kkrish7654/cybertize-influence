@@ -13,7 +13,7 @@ const Layout = (data) => {
             <div>
                 <SideBar/>
             </div>
-            <div className='ml-[290px] mt-24 mb-24 w-[calc(100%_-_310px)] h-screen'>
+            <div className='ml-[290px] mt-24 mb-12 w-[calc(100%_-_310px)] min-h-screen'>
                 {data.children}
             </div>
         </div>
