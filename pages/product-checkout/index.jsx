@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout/Layout'
+import ProductCart from '../../components/ProductsComponents/ProductCart'
 
 const Index = () => {
   return (
@@ -23,64 +24,179 @@ const Index = () => {
             <hr />
             <div>
             <form className="w-full max-w-lg">
-  <div className="flex flex-wrap mt-6 mb-6">
+  <div className="flex flex-wrap mt-6 mb-6 ">
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+      <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="grid-first-name">
         First Name
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane"/>
+      <input className="appearance-none block w-full bg-gray-200 text-[#454650] border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane"/>
     </div>
     <div className="w-full md:w-1/2 px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+      <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="grid-last-name">
         Last Name
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-username" type="text" placeholder="Doe"/>
+      <input className="appearance-none block w-full bg-gray-200 text-[#454650] border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-username" type="text" placeholder="Doe"/>
     </div>
   </div>
   <div clas="flex flex-wrap mt-6 mb-6">
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-username">
+      <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="grid-username">
         Username
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-username" type="text" placeholder="Username"/>
+      <input className="appearance-none block w-full bg-gray-200 text-[#454650] border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-username" type="text" placeholder="Username"/>
     </div>
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
+      <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="grid-email">
         Email {"(Optional)"}
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-email" type="text" placeholder="you@example.com"/>
+      <input className="appearance-none block w-full bg-gray-200 text-[#454650] border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-email" type="text" placeholder="you@example.com"/>
     </div>
-    <div clas="w-full px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-address-1">
+    <div className="w-full px-3">
+      <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="grid-address-1">
         Address
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-address-1" type="text" placeholder="123 Main st"/>
+      <input className="appearance-none block w-full bg-gray-200 text-[#454650] border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-address-1" type="text" placeholder="123 Main st"/>
     </div>
-    <div clas="w-full px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-address-2">
+    <div className="w-full px-3">
+      <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="grid-address-2">
         Address 2 {"(Optional)"}
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-address-2" type="text" placeholder="Apartment or Suit"/>
+      <input className="appearance-none block w-full bg-gray-200 text-[#454650] border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-address-2" type="text" placeholder="Apartment or Suit"/>
     </div>
 
-    <div className='flex flex-wrap p-3'>
-    <label for="countries" className="block mb-2 text-sm font-medium">Country</label>
+    <div className='flex gap-3 items-center flex-wrap p-3'>
+      {/** For Country */}
+      <div>
+      <label for="countries" >Country</label>
       <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
         <option selected>Choose a country</option>
         <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
+        <option value="CA">India</option>
       </select>
+      </div>
 
-      <label for=""></label>
+      {/**For State */}
+      <div>
+      <label for="state" className="block mb-2 text-sm font-medium">State</label>
+      <select id="state" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+        <option selected>Choose a country</option>
+        <option value="Jh">Jharkhand</option>
+        <option value="SM">California</option>
+      </select>
+      </div>
+
+      {/** ZIP code */}
+      <div>
+      <label for="zip" className="block mb-2 text-sm font-medium">Zip</label>
+      <input type="text" name="zip" id="zip" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'/>
+      </div>
+      
+
     </div>
+
+    <hr />
+
+
+    <div className='w-full'>
+
+          <ul class="w-full text-sm font-medium ">
+            <li class="w-full  rounded-t-lg">
+              <div class="flex items-center pl-3">
+                <input
+                  id="vue-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 rounded "
+                />
+                <label
+                  for="vue-checkbox"
+                  class="w-full py-3 ml-2 text-sm font-medium text-gray-900 "
+                >
+                  <p className='text-sm'>Shipping address is the same as my billing address</p>
+                </label>
+              </div>
+            </li>
+            <li class="w-full  rounded-t-lg ">
+              <div class="flex items-center pl-3">
+                <input
+                  id="react-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-6 h-6 text-blue-600 bg-gray-100 rounded "
+                />
+                <label
+                  for="react-checkbox"
+                  class="w-full py-3 ml-2 text-sm font-medium text-gray-900 "
+                >
+                  <p className='text-sm'>Save this information for next time</p>
+                </label>
+              </div>
+              </li>
+            {/** copy <li> section and paste here to add more checkbox */}
+
+          </ul>
+        </div>
+
+      {/** radio */}
+
+      <div className="flex items-center m-4">
+    <input id="default-radio-1" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 "/>
+    <label for="default-radio-1" className="ml-2 text-sm font-medium text-[#454650]">Credit Card</label>
+</div>
+<div class="flex items-center m-4">
+    <input checked id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 "/>
+    <label for="default-radio-2" className="ml-2 text-sm font-medium text-[#454650]">Debit Card</label>
+</div>
+
+<div class="flex items-center m-4">
+    <input checked id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 "/>
+    <label for="default-radio-2" className="ml-2 text-sm font-medium text-[#454650]">PayPal</label>
+</div>
     </div>
+
+    {/**Card payment section */}
+
+    <div className="flex flex-wrap mt-6 mb-6">
+    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="grid-card-name">
+        Name On Card
+      </label>
+      <input className="appearance-none block w-full bg-gray-200 text-[#454650] border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-card-name" type="text" />
+    </div>
+    <div className="w-full md:w-1/2 px-3">
+      <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="grid-credit-number">
+        Credit Card Number
+      </label>
+      <input className="appearance-none block w-full bg-gray-200 text-[#454650] border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-credit-number" type="text" />
+    </div>
+  </div>
+  <div className='flex gap-3 items-center flex-wrap p-3'>
+      {/** For Country */}
+      <div>
+      <label for="expiration" >Expiration</label>
+      <input type="text" name="expiration" id="expiration" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'/>
+      </div>
+
+      <div>
+      <label for="cvv" >CVV</label>
+      <input type="text" name="cvv" id="cvv" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'/>
+      </div>
+
+
+</div>
+<div className='p-3'>
+<button className='bg-blue-600 p-2 text-white w-full rounded-md'>Continue To Checkout</button>
+</div>
+
+
   </form>
             </div>
           </div>
-          <div>
 
+
+          {/*** Product-cart side bar */}
+          <div>
+              <ProductCart/>
           </div>
         </div>
         </div>
