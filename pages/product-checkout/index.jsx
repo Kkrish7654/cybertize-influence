@@ -11,11 +11,16 @@ const Index = () => {
     lastName:'',
     userName:'',
     address:'',
-    address2:''
+    zip:'',
+    payment:'',
+    cardName:'',
+    cardNumber:'',
+    expiration:'',
+    cvv:''
   }
   const validate = (values) => {
     let errors = {}
-    // validation for first name
+    // first name validation
     if(!values.firstName){
       errors.firstName = "requried"
     }else if (values.firstName.trim().length <= 2){
@@ -24,7 +29,7 @@ const Index = () => {
       errors.firstName = 'Cannot start with whitespace';
     }
 
-    // validation for last name
+    // last name validation
     if(!values.lastName){
       errors.lastName = "required"
     }else if(values.lastName.length <= 2){
@@ -33,7 +38,7 @@ const Index = () => {
       errors.firstName = 'Cannot start with whitespace';
     }
 
-
+    // username validation
     if(!values.userName){
       errors.userName = "required"
     }else if(values.userName === existedUser){
@@ -44,6 +49,8 @@ const Index = () => {
       errors.firstName = 'Cannot start with whitespace';
     }
 
+    
+    // address validation
     if(!values.address){
       errors.address = "requried"
     }else if (values.address.trim().length <= 2){
@@ -51,6 +58,29 @@ const Index = () => {
     } else if (/\s/.test(values.address.charAt(0))) {
       errors.address = 'Cannot start with whitespace';
     }
+
+    // zip code validation
+    if(!values.zip){
+      errors.zip = "requried"
+    } else if (/\s/.test(values.zip.charAt(0))) {
+      errors.address = 'Cannot start with whitespace';
+    }
+
+
+    if(!values.cardName){
+      errors.cardName = "requried"
+    }else if (values.cardName.trim().length <= 2){
+      errors.cardName = "too short"
+    } else if (/\s/.test(values.cardName.charAt(0))) {
+      errors.cardName = 'Cannot start with whitespace';
+    }
+
+    if(!values.cardNumber) {
+      errors.cardNumber = "required"
+    }else if (/\s/.test(values.cardNumber.charAt(0))) {
+      errors.address = 'Cannot start with whitespace';
+    }
+    
 
     return errors;
   }
@@ -188,7 +218,14 @@ const submitForm = (values) => {
                         {/** ZIP code */}
                         <div>
                         <label for="zip" className="block mb-2 text-sm font-medium">Zip</label>
-                        <input type="text" name="zip" id="zip" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'/>
+                        {errors.zip && touched.zip && (
+                          <div className='text-red-500 text-xs'>{errors.zip}</div>
+                        )}
+                        <input 
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.zip}
+                        type="text" name="zip" id="zip" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'/>
                         </div>
                         
                   
@@ -261,16 +298,30 @@ const submitForm = (values) => {
                   
                       <div className="flex flex-wrap mt-6 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                        <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="grid-card-name">
+                        <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="cardName">
                           Name On Card
                         </label>
-                        <input className="appearance-none block w-full bg-gray-200 text-[#454650] border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-card-name" type="text" />
+
+                        {errors.cardName && touched.cardName && (
+                          <div className='text-red-500 text-xs'>{errors.cardName}</div>
+                        )}
+                        <input 
+                        
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.cardName}
+                        className="appearance-none block w-full bg-gray-200 text-[#454650] border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="cardName" type="text" />
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-[#454650] text-xs font-bold mb-2" for="grid-credit-number">
                           Credit Card Number
                         </label>
-                        <input className="appearance-none block w-full bg-gray-200 text-[#454650] border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-credit-number" type="text" />
+                       
+                        <input 
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.cardName}
+                        className="appearance-none block w-full bg-gray-200 text-[#454650] border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-credit-number" type="text" />
                       </div>
                     </div>
                     <div className='flex gap-3 items-center flex-wrap p-3'>
