@@ -6,7 +6,7 @@ const Dashboard = [
   { title: "E Commerce Dashboard", path: "/" },
   { title: "Product List", path: "/products" },
   { title: "Product Single", path: "/productsingle" },
-  { title: "Product Checkout", path: "/productcheckout" },
+  { title: "Product Checkout", path: "/product-checkout" },
   
   //add new links here
 ];

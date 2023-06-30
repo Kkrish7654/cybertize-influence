@@ -39,7 +39,7 @@ const Index = () => {
               }}
              
               modules={[Autoplay, Pagination]}
-              className="mySwiper"
+              className="mySwiper flex justify-center items-center"
             >
                 <SwiperSlide>
                   <img className='w-72' src="https://preview.easetemplate.com/influence/html/influence/assets/images/eco-slider-img-2.png" alt="" />
